@@ -127,6 +127,7 @@ namespace BankingOOPpractice
                 Console.WriteLine("[7] Open Overdraft");
                 Console.WriteLine("[8] Show Transactions");
                 Console.WriteLine("[9] Exit");
+                Console.WriteLine("[10] Show all Accounts");
                 Console.Write("Choose: ");
 
                 int choice = Convert.ToInt32(Console.ReadLine());
@@ -160,6 +161,9 @@ namespace BankingOOPpractice
                     case 9:
                         Console.WriteLine("Exiting...");
                         return;
+                    case 10:
+                        ShowAllAccounts();
+                        break;
                     default:
                         Console.WriteLine("Invalid choice, try again.");
                         break;
@@ -303,6 +307,14 @@ namespace BankingOOPpractice
             }
 
             Accounts[name].ShowTransactionHistory();
+        }
+
+        static void ShowAllAccounts()
+        {
+            foreach (var acc in Accounts)
+            {
+                Console.WriteLine($"{acc.Key}: Balance = {acc.Value.Balance}");
+            }
         }
     }
 }
