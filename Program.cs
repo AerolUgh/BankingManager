@@ -118,6 +118,7 @@ namespace BankingOOPpractice
         {
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("\n--- Banking System ---");
                 Console.WriteLine("[1] Create Account");
                 Console.WriteLine("[2] Transfer Funds");
