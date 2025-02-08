@@ -168,6 +168,7 @@ namespace BankingOOPpractice
                         Console.WriteLine("Invalid choice, try again.");
                         break;
                 }
+                Thread.Sleep(1500);
             }
         }
 
